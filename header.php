@@ -13,7 +13,7 @@
                 <li><a href="https://github.com/Thenujan-0/grub-editor">Source Code(Github)</a></li>
                 <li><a href="contribute.php">Contribute</a></li>
                 <li><a href="#">Donate</a></li>
-                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="https://thenujan.herokuapp.com/">About Me</a></li>
             </ul>
         </nav>
         
@@ -34,6 +34,6 @@
         <li><a href="https://github.com/Thenujan-0/grub-editor">Source Code(Github)</a></li>
         <li><a href="contribute.php">Contribute</a></li>
         <li><a href="#">Donate</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="https://thenujan.herokuapp.com/">About Me</a></li>
     </ul>
 </nav>
