@@ -27,7 +27,7 @@ $green3:hsl(130, 100%, 49%);
 }
 #title{
     box-sizing:border-box;
-    width:clamp(300px,80%,1200px);
+    width:clamp(200px,80%,1200px);
     position: relative;
     left:50%;
     transform: translateX(-50%);
@@ -41,12 +41,19 @@ $green3:hsl(130, 100%, 49%);
 
     }
 
-    h1{
+    h2{
         font-size:50px;
         text-align: center;
 
-        @media screen and (max-width:$secondThresWidth){
+        @media screen and (max-width:$thresholdWidth){
             font-size:35px;
+        }
+
+        @media screen and (max-width:$secondThresWidth){
+            font-size:30px;
+        }
+        @media screen and (max-width:300px){
+            font-size:25px;
         }
     }
     p{
@@ -104,7 +111,7 @@ $green3:hsl(130, 100%, 49%);
         position:absolute;
         top:50%;
         right:10%;
-        transform:translate(-50%,-50%);
+        transform:translate(+50%,-50%);
         cursor:pointer;
         padding:5px;
 
@@ -143,12 +150,12 @@ $green3:hsl(130, 100%, 49%);
 }
 
 #how_it_works{
-    width:clamp(300px,80%,1200px);
+    width:clamp(200px,80%,1200px);
     position:relative;
     left:50%;
     transform: translateX(-50%);
     // margin:20px;
-    h1,p{
+    h2,p{
         margin: 20px 0;
         
     }
@@ -166,7 +173,7 @@ $green3:hsl(130, 100%, 49%);
 }
 
 #download{
-    width:clamp(300px,80%,1200px);
+    width:clamp(200px,80%,1200px);
     position:relative;
     left:50%;
     transform: translateX(-50%);
@@ -184,7 +191,7 @@ $green3:hsl(130, 100%, 49%);
     }
 
 
-    h2{
+    h3{
         font-size:22px;
         margin-top: 20px;
         margin-bottom:10px;
@@ -254,6 +261,7 @@ $green3:hsl(130, 100%, 49%);
 
 
 .section_heading{
+    font-size:30px;
     color:$green2;
     margin-top:40px;
 }

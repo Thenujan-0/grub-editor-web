@@ -177,7 +177,7 @@ nav#side_nav_bar ul a.current {
 
 #title {
   box-sizing: border-box;
-  width: clamp(300px, 80%, 1200px);
+  width: clamp(200px, 80%, 1200px);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -189,13 +189,23 @@ nav#side_nav_bar ul a.current {
     padding: 50px 0;
   }
 }
-#title h1 {
+#title h2 {
   font-size: 50px;
   text-align: center;
 }
-@media screen and (max-width: 520px) {
-  #title h1 {
+@media screen and (max-width: 840px) {
+  #title h2 {
     font-size: 35px;
+  }
+}
+@media screen and (max-width: 520px) {
+  #title h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 300px) {
+  #title h2 {
+    font-size: 25px;
   }
 }
 #title p {
@@ -241,7 +251,7 @@ nav#side_nav_bar ul a.current {
   position: absolute;
   top: 50%;
   right: 10%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
   cursor: pointer;
   padding: 5px;
 }
@@ -275,12 +285,12 @@ nav#side_nav_bar ul a.current {
 }
 
 #how_it_works {
-  width: clamp(300px, 80%, 1200px);
+  width: clamp(200px, 80%, 1200px);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
-#how_it_works h1, #how_it_works p {
+#how_it_works h2, #how_it_works p {
   margin: 20px 0;
 }
 #how_it_works p {
@@ -293,7 +303,7 @@ nav#side_nav_bar ul a.current {
 }
 
 #download {
-  width: clamp(300px, 80%, 1200px);
+  width: clamp(200px, 80%, 1200px);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -306,7 +316,7 @@ nav#side_nav_bar ul a.current {
     width: 95%;
   }
 }
-#download h2 {
+#download h3 {
   font-size: 22px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -356,6 +366,7 @@ nav#side_nav_bar ul a.current {
 }
 
 .section_heading {
+  font-size: 30px;
   color: #1adb4e;
   margin-top: 40px;
 }

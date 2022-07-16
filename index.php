@@ -22,7 +22,7 @@
     
     <div id="main">
         <div id="title">
-            <h1 >No need to edit <span>/etc/default/grub manually</span></h1>
+            <h2 >No need to edit /etc/default/grub manually</h2>
             <p>Grub Editor allows you to customize grub with a graphical application(Not a text editor<span class="emoji">😉</span>)</p>
         </div>
         
@@ -40,7 +40,7 @@
             <p>No more editing /etc/default/grub manually</p>
         </div>
         <div id="how_it_works">
-            <h1 class="section_heading">How does it work?</h1>
+            <h2 class="section_heading">How does it work?</h2>
             <p>Unlike the grub customizer, grub editor performs the edits to <span id="cool" class="inline-code">etc/default/grub</span>
                 and then calls <span class="inline-code">update-grub</span> or <span class="inline-code">grub-mkconfig</span> to update <span class="inline-code">/boot/grub/grub.cfg</span>. 
                 It is much more safer than editing <span class="inline-code">/boot/grub/grub.cfg</span> directly as it cannot leave the system in an unbootable condition.</p>
@@ -50,11 +50,11 @@
         </div>
         <div id="download-container">
             <div id="download">
-                <h1 class="section_heading">Download</h1>
+                <h2 class="section_heading">Download</h2>
                 <div id="cards">
                     <div class="sub-download">
                         <img src="https://archlinux.org/static/archnavbar/archlogo.a2d0ef2df27d.png" id="archlogo">
-                        <h2 >Arch linux and it's derivatives</h2>
+                        <h3 >Arch linux and it's derivatives</h3>
                         <p>It is in AUR as <a target="_black" href="https://aur.archlinux.org/packages/grub-editor">grub-editor</a>.<br>
                         You can use a package manager like pamac to install or you can execute the commands below</p>
                         <div class="code">
@@ -68,11 +68,11 @@
                     </div>
                     <div class="sub-download">
                         <img src="https://assets.ubuntu.com/v1/ce518a18-CoF-2022_solid+O.svg" id="ubuntulogo">
-                        <h2>Ubuntu and it's derivatives</h2>
+                        <h3>Ubuntu and it's derivatives</h3>
                         <p>Download and install the <a target="_black" href="https://github.com/Thenujan-0/grub-editor/releases/download/v1.0/grub-editor.deb">deb file</a></p>
                     </div>
                     <div class="sub-download">
-                        <h2>fedora</h2>
+                        <h3>fedora</h3>
                         
                         <p>We currently do not have a fedora release</p>
                     </div>

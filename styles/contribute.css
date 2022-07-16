@@ -169,7 +169,7 @@ nav#side_nav_bar ul a.current {
 
 #main {
   position: relative;
-  width: clamp(300px, 80%, 1500px);
+  width: clamp(200px, 80%, 1500px);
   left: 50%;
   transform: translateX(-50%);
 }
