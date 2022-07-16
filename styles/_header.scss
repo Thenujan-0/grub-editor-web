@@ -5,7 +5,11 @@
 }
 
 $akshar:'Akshar',sans-serif;
+
+//This variable is also shared with javascript manually
+//so when updating this update that also in header.js
 $thresholdWidth:840px;
+
 $green1:#19e646;
 $green2:#1adb4e;
 $green3:#18cc49;
@@ -17,7 +21,8 @@ $green3:#18cc49;
 }
 
 body{
-    overflow-x:hidden ;
+    // overflow-x:hidden ;
+    width:100%;
 }
 
 #header{
@@ -76,6 +81,15 @@ body{
                             background: $green1;
                             border-radius: 10px;
                             transition: background 0.3s;
+                        }
+
+                        
+                    }
+
+                    a.current{
+                        color:#18cc49;
+                        &:hover{
+                            color:white;
                         }
                     }
                 }
@@ -136,6 +150,12 @@ nav#side_nav_bar{
                 background:#eeeeee;
                 
             }
+
+
+        }
+
+        a.current{
+            color:#008824;
         }
     }
 }
@@ -157,31 +177,30 @@ nav#side_nav_bar{
     $height:6px;
     $distance:3px;
 
-    span#hamburger_menu_span1{
-        
+    span{
 
         display: block;
         background:black;
         width:$width;
         height:$height;
         position: absolute;
-        top:25%;
         left:50%;
         transform:translate(-50%,-50%);
-        
     }
-    span#hamburger_menu_span2{
-        @extend #hamburger_menu_span1;
+
+    span:nth-child(1){
+        top:25%;
+    }
+    span:nth-child(2){
         top:50%;
 
     }
 
-    span#hamburger_menu_span3{
-        @extend #hamburger_menu_span1;
+    span:nth-child(3){
         top:75%;
     }
 
-    &:hover #hamburger_menu_span1 {
+    &:hover span {
         // background:#333333;
         background:$green2;
         transition: 0.3s;
@@ -195,3 +214,18 @@ nav#side_nav_bar{
         display: block;
     }
 }
+
+//When the hamburger menu has changed into a close icon
+#hamburger_menu.close{
+    span:nth-child(1){
+        top:50%;
+        transform-origin: center;
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+    span:nth-child(3){
+        top:50%;
+        transform-origin: center;
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
+}
+

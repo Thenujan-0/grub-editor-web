@@ -6,7 +6,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  width: 100%;
 }
 
 #header {
@@ -71,6 +71,12 @@ body {
   border-radius: 10px;
   transition: background 0.3s;
 }
+#header header #nav_bar ul li a.current {
+  color: #18cc49;
+}
+#header header #nav_bar ul li a.current:hover {
+  color: white;
+}
 @media screen and (max-width: 840px) {
   #header header #nav_bar {
     display: none;
@@ -107,6 +113,9 @@ nav#side_nav_bar ul a {
 nav#side_nav_bar ul a:hover {
   background: #eeeeee;
 }
+nav#side_nav_bar ul a.current {
+  color: #008824;
+}
 
 #hamburger_menu {
   width: 40px;
@@ -118,23 +127,25 @@ nav#side_nav_bar ul a:hover {
   display: none;
   z-index: 3;
 }
-#hamburger_menu span#hamburger_menu_span1, #hamburger_menu span#hamburger_menu_span3, #hamburger_menu span#hamburger_menu_span2 {
+#hamburger_menu span {
   display: block;
   background: black;
   width: 30px;
   height: 6px;
   position: absolute;
-  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#hamburger_menu span#hamburger_menu_span2 {
+#hamburger_menu span:nth-child(1) {
+  top: 25%;
+}
+#hamburger_menu span:nth-child(2) {
   top: 50%;
 }
-#hamburger_menu span#hamburger_menu_span3 {
+#hamburger_menu span:nth-child(3) {
   top: 75%;
 }
-#hamburger_menu:hover #hamburger_menu_span1, #hamburger_menu:hover span#hamburger_menu_span2, #hamburger_menu:hover span#hamburger_menu_span3 {
+#hamburger_menu:hover span {
   background: #1adb4e;
   transition: 0.3s;
 }
@@ -142,6 +153,17 @@ nav#side_nav_bar ul a:hover {
   #hamburger_menu {
     display: block;
   }
+}
+
+#hamburger_menu.close span:nth-child(1) {
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#hamburger_menu.close span:nth-child(3) {
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 * {
@@ -154,12 +176,18 @@ nav#side_nav_bar ul a:hover {
 }
 
 #title {
-  box-sizing: content-box;
+  box-sizing: border-box;
   width: clamp(300px, 80%, 1200px);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  padding: 100px;
+  padding: 100px 0;
+}
+@media screen and (max-width: 620px) {
+  #title {
+    width: 95%;
+    padding: 50px 0;
+  }
 }
 #title h1 {
   font-size: 50px;
@@ -173,6 +201,11 @@ nav#side_nav_bar ul a:hover {
 #title p {
   margin: 30px;
   font-size: 25px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+#title p span.emoji {
+  color: black;
 }
 @media screen and (max-width: 520px) {
   #title p {
@@ -246,7 +279,6 @@ nav#side_nav_bar ul a:hover {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin: 20px;
 }
 #how_it_works h1, #how_it_works p {
   margin: 20px 0;
@@ -254,8 +286,10 @@ nav#side_nav_bar ul a:hover {
 #how_it_works p {
   font-size: 20px;
 }
-#how_it_works span {
+#how_it_works span.inline-code {
   background: #cccccc;
+  padding: 0 5px;
+  border-radius: 3px;
 }
 
 #download {
@@ -263,9 +297,14 @@ nav#side_nav_bar ul a:hover {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin: 50px 20px;
+  margin: 50px 0;
   border-radius: 10px;
   padding: 10px;
+}
+@media screen and (max-width: 500px) {
+  #download {
+    width: 95%;
+  }
 }
 #download h2 {
   font-size: 22px;
@@ -279,9 +318,9 @@ nav#side_nav_bar ul a:hover {
 }
 #download .sub-download {
   padding: 5px;
-  margin: 30px 20px;
+  margin: 30px 0;
   border-radius: 10px;
-  border: 1px solid #999;
+  border: 1px solid rgb(223, 223, 223);
   padding: 20px;
   background: white;
 }
@@ -300,12 +339,20 @@ nav#side_nav_bar ul a:hover {
 #download .code {
   background: #f5f5f5;
   border-radius: 10px;
-  border: 2px solid #999;
   padding: 10px;
   margin: 5px;
 }
 #download .code p {
   color: black;
+  word-wrap: break-word;
+}
+@media screen and (max-width: 500px) {
+  #download .code p {
+    font-size: 16px;
+  }
+}
+#download .code i {
+  margin-right: 5px;
 }
 
 .section_heading {
@@ -314,5 +361,5 @@ nav#side_nav_bar ul a:hover {
 }
 
 a {
-  color: #18cc49;
+  color: #00b928;
 }/*# sourceMappingURL=index.css.map */

@@ -7,7 +7,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  width: 100%;
 }
 
 #header {
@@ -72,6 +72,12 @@ body {
   border-radius: 10px;
   transition: background 0.3s;
 }
+#header header #nav_bar ul li a.current {
+  color: #18cc49;
+}
+#header header #nav_bar ul li a.current:hover {
+  color: white;
+}
 @media screen and (max-width: 840px) {
   #header header #nav_bar {
     display: none;
@@ -108,6 +114,9 @@ nav#side_nav_bar ul a {
 nav#side_nav_bar ul a:hover {
   background: #eeeeee;
 }
+nav#side_nav_bar ul a.current {
+  color: #008824;
+}
 
 #hamburger_menu {
   width: 40px;
@@ -119,23 +128,25 @@ nav#side_nav_bar ul a:hover {
   display: none;
   z-index: 3;
 }
-#hamburger_menu span#hamburger_menu_span1, #hamburger_menu span#hamburger_menu_span3, #hamburger_menu span#hamburger_menu_span2 {
+#hamburger_menu span {
   display: block;
   background: black;
   width: 30px;
   height: 6px;
   position: absolute;
-  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#hamburger_menu span#hamburger_menu_span2 {
+#hamburger_menu span:nth-child(1) {
+  top: 25%;
+}
+#hamburger_menu span:nth-child(2) {
   top: 50%;
 }
-#hamburger_menu span#hamburger_menu_span3 {
+#hamburger_menu span:nth-child(3) {
   top: 75%;
 }
-#hamburger_menu:hover #hamburger_menu_span1, #hamburger_menu:hover span#hamburger_menu_span2, #hamburger_menu:hover span#hamburger_menu_span3 {
+#hamburger_menu:hover span {
   background: #1adb4e;
   transition: 0.3s;
 }
@@ -143,6 +154,17 @@ nav#side_nav_bar ul a:hover {
   #hamburger_menu {
     display: block;
   }
+}
+
+#hamburger_menu.close span:nth-child(1) {
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#hamburger_menu.close span:nth-child(3) {
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 #main {

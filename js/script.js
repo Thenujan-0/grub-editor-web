@@ -58,4 +58,4 @@ btnRight.addEventListener("click",btnNextClick)
 btnLeft.addEventListener("click",btnBeforeClick)
 
 
-    
+//Automatically switch between images

@@ -9,10 +9,10 @@
 }
 
 $akshar:'Akshar',sans-serif;
-$thresholdWidth:840px;
+$thresholdWidth:840px;  
 $green1:#19e646;
 $green2:#1adb4e;
-$green3:#18cc49;
+$green3:hsl(130, 100%, 49%);
 
 
 *{
@@ -26,15 +26,21 @@ $green3:#18cc49;
     // background:#f0f0f0;
 }
 #title{
-    box-sizing:content-box;
+    box-sizing:border-box;
     width:clamp(300px,80%,1200px);
     position: relative;
     left:50%;
     transform: translateX(-50%);
-
-    padding:100px;
+    padding:100px 0;
 
     $secondThresWidth:520px;
+
+    @media screen and(max-width:620px){
+        width:95%;
+        padding:50px 0;
+
+    }
+
     h1{
         font-size:50px;
         text-align: center;
@@ -46,6 +52,13 @@ $green3:#18cc49;
     p{
         margin:30px ;
         font-size:25px;
+        text-align: center;
+        color:rgba(0,0,0,0.8);
+
+        span.emoji{
+            //To make sure that emoji's opacity isn't affected
+            color:black
+        }
 
         @media  screen and(max-width:$secondThresWidth) {
             font-size:20px;
@@ -134,7 +147,7 @@ $green3:#18cc49;
     position:relative;
     left:50%;
     transform: translateX(-50%);
-    margin:20px;
+    // margin:20px;
     h1,p{
         margin: 20px 0;
         
@@ -145,8 +158,10 @@ $green3:#18cc49;
     p{
         font-size: 20px;
     }
-    span{
+    span.inline-code{
         background:#cccccc;
+        padding:0 5px;
+        border-radius: 3px;   
     }
 }
 
@@ -155,13 +170,20 @@ $green3:#18cc49;
     position:relative;
     left:50%;
     transform: translateX(-50%);
-    margin:50px 20px;
+    margin:50px 0;
     // background:$green3;
     // background:white;
 
     // background:#444;
     border-radius: 10px;
     padding:10px;
+
+
+    @media screen and(max-width:500px){
+        width:95%;
+    }
+
+
     h2{
         font-size:22px;
         margin-top: 20px;
@@ -185,9 +207,9 @@ $green3:#18cc49;
         // background:#999;
         
         padding:5px;
-        margin:30px 20px;
+        margin:30px 0;
         border-radius: 10px;
-        border:1px solid #999;
+        border:1px solid rgb(223, 223, 223);
         padding:20px;
         background:white;
     }
@@ -197,7 +219,6 @@ $green3:#18cc49;
         max-width:100%;
         height:50px;
         filter: drop-shadow(1px 4px 0 black) ;
-
         display:none;
     }
     #ubuntulogo{
@@ -212,12 +233,22 @@ $green3:#18cc49;
         background:#f5f5f5;
         // background: #00ff00;
         border-radius: 10px;
-        border:2px solid  #999;
+        // border:2px solid  #999;
         padding:10px;
         margin:5px;
+
         p{
             color:black;
+            word-wrap:break-word;
+            @media screen and(max-width:500px) {
+                font-size:16px;
+            }
         }
+
+        i{
+            margin-right:5px;
+        }
+
     }
 }
 
@@ -229,5 +260,6 @@ $green3:#18cc49;
 
 
 a{
-    color:$green3;
+    color:#00b928;
+    // filter:drop-shadow(1px 1px 1px black)
 }

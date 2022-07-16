@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/contribute.css">
     <script type="module" src="./js/contribute.js"></script>
-    <script src="https://kit.fontawesome.com/9c5767853b.js" crossorigin="anonymous"></script>
+    <?php
+        include("header-include.php");
+    ?>
 
     <title>Grub Editor - contribute</title>
 </head>
 <body>
     
-    <div id="header">
-        <?php
-            include("header.php");
-        ?>
-    </div>
+    <?php
+    //The following variable will be used in header.php
+    $active_page="contribute";
+        include("header.php");
+    ?>
     <div id="main">
         <div id="thank_you">
             <h1>If you really are willing to contribute to this project, Thank You</h1>
