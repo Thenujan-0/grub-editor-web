@@ -10,8 +10,8 @@
                     <li><a target="_blank" <?php if($active_page=="home"){echo 'class="current"';}?> href="index.php">Home</a></li>
 
                     <li><a target="_blank" href="https://github.com/Thenujan-0/grub-editor">Source Code(Github)</a></li>
-                    <li><a target="_blank" <?php if($active_page=="contribute"){echo 'class="current"';}?> href="contribute.php">Contribute</a></li>
-                    <li><a target="_blank" <?php if($active_page=="donate"){echo 'class="current"';}?> href="#">Donate</a></li>
+                    <li><a <?php if($active_page=="contribute"){echo 'class="current"';}?> href="contribute.php">Contribute</a></li>
+                    <li><a <?php if($active_page=="donate"){echo 'class="current"';}?> href="#">Donate</a></li>
                     <li><a target="_blank" href="https://thenujan.herokuapp.com/">About Me</a></li>
                 </ul>
             </nav>
