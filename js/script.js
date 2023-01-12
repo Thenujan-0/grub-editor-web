@@ -1,24 +1,7 @@
-import {onLoad as headerOnLoad ,onResize} from "./header.js"
+import {loadHeader ,onResize} from "./header.js"
 
-
-
-// Add header part to html
-let body = document.querySelector("body")
-
-        headerOnLoad()
-        //call that function once when script xecution starts
-        onResize()
-
-
-
-
-
+loadHeader()
 window.addEventListener("resize",onResize)
-
-
-
-
-
 
 
 let btnRight= document.getElementById("btn-right")

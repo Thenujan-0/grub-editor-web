@@ -1,12 +1,7 @@
-import {onLoad as headerOnLoad,onResize} from "./header.js"
+import {loadHeader, onResize} from "./header.js"
 
 function onLoad(){
-    let header=document.getElementById("header")
-
-        // header.innerHTML= text;
-    headerOnLoad()
-    onResize();
-
+    loadHeader()
     document.addEventListener("resize",onResize)
 }
 

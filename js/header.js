@@ -30,9 +30,16 @@ function hamMenuVisible(){
     return Math.abs(pushedLeft-header.width())>3
 }
 
+function loadHeader(){
+    fetch("header.html").then((data)=>data.text()).then((text)=> {
+        $("body")[0].insertAdjacentHTML('afterbegin',text)
+    }).then(()=>{
+        afterLoad()
+        onResize()
+    })
+}
 
-
-function onLoad(){
+function afterLoad(){
     let hamburgerMenu= $("#hamburger_menu")
     let hamSpan2 = $("span#hamburger_menu_span2")
     let header =$("#header")
@@ -74,4 +81,4 @@ function onLoad(){
     hamburgerMenu.click(hamburgerMenuCallback)
 }
 
-export {onLoad,onResize}
+export {loadHeader,onResize}
